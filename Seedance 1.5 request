@@ -1,0 +1,22 @@
+curl https://ark.ap-southeast.bytepluses.com/api/v3/contents/generations/tasks \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $ARK_API_KEY" \
+  -d '{
+    "model": "seedance-1-5-pro-251215",
+    "content": [
+         {
+            "type": "text",
+            "text": "A girl holding a fox, the girl opens her eyes, looks gently at the camera, the fox hugs affectionately, the camera slowly pulls out, the girl’s hair is blown by the wind, and the sound of the wind can be heard"
+        },
+        {
+            "type": "image_url",
+            "image_url": {
+                "url": "https://ark-doc.tos-ap-southeast-1.bytepluses.com/doc_image/i2v_foxrgirl.png"
+            }
+        }
+   ],
+    "generate_audio":true,
+    "ratio": "adaptive",
+    "duration": 5,
+    "watermark": false
+}'
